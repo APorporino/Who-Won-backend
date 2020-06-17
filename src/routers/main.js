@@ -1,5 +1,4 @@
 const express = require('express')
-const random = require('random')
 const Hockey = require('../models/hockey')
 const Baseball = require('../models/baseball')
 
@@ -42,6 +41,12 @@ router.get('/getSeries', async (req,res)=>{
         if(!series){
             throw new Error("Cannot find series with that year and those sports")
         }
+        res.header({
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+            'Access-Control-Allow-Headers': 'Origin, Content-Type, Authorization, X-Auth-Token'
+            }
+        );
         res.send(series)
     }catch(e){
         res.status(404).send(e.message)
