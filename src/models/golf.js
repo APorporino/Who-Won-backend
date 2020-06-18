@@ -10,6 +10,10 @@ const golfSchema = new mongoose.Schema(
         type: String,
         required: true,
     },
+    Finalist: {
+        type: String,
+        required: true,
+    },
     Year: {
         type: Number,
         required: true,
