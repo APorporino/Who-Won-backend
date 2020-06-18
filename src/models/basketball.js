@@ -6,6 +6,10 @@ const basketballSchema = new mongoose.Schema(
         type: String,
         required: true,
     },
+    League: {
+        type: String,
+        required: true,
+    },
     Finalist: {
         type: String,
         required: true,

@@ -10,6 +10,10 @@ const hockeySchema = new mongoose.Schema(
         type: String,
         required: true,
     },
+    League: {
+        type: String,
+        required: true,
+    },
     Year: {
         type: Number,
         required: true,

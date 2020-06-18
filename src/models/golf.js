@@ -6,7 +6,7 @@ const golfSchema = new mongoose.Schema(
         type: String,
         required: true,
     },
-    Major: {
+    League: {
         type: String,
         required: true,
     },

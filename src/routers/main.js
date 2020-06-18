@@ -69,19 +69,19 @@ function getYear(req, sport){
 function getSportsName(modelName){
     switch (modelName){
         case "golf_majors":
-            return "Golf: "
+            return "Golf - "
         case "basketballs":
-            return "Basketball"
+            return "Basketball - "
         case "basketballs":
-            return "Basketball"
+            return "Basketball - "
         case "hockeys":
-            return "Hockey"
+            return "Hockey - "
         case "baseballs":
-            return "Baseball"
+            return "Baseball - "
         case "footballs":
-            return "Football"
+            return "Football - "
         case "international_soccers":
-            return "Soccer"
+            return "Soccer - "
     }
 }
 // getSeries?hockey=true&baseball=true
@@ -100,13 +100,13 @@ router.get('/getSeries', async (req,res)=>{
         var sportName = getSportsName(sport.collection.collectionName)
         
         if (series.length > 1){
-            const index = getRandomIntInclusive(1,4) - 1
+            const index = getRandomIntInclusive(1,series.length) - 1
             temp = series[index]
-            sportName += temp.Major
             series = []
             series[0] = temp
-            
         }
+        
+        sportName += series[0].League
 
         //console.log(sportName)
 
