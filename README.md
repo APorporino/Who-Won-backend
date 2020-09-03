@@ -6,7 +6,7 @@ To use API:
 
 GET https://who-won-backend.herokuapp.com/getSeries
 
-## Query Parameters: baseball, hockey
+## Query Parameters: baseball, hockey, football, soccer, golf, basketball
 Will request series from that sport if it is set to true
 
 ## Examples
