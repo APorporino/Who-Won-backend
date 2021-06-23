@@ -96,7 +96,7 @@ router.get('/getSeries', async (req,res)=>{
     const year = getYear(req,sport)
 
     try{
-        console.lot(sport)
+        console.log(sport)
         var series = await sport.find({Year: year})
         console.log("Here")
         console.log(series)
