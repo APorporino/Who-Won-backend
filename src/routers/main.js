@@ -96,7 +96,10 @@ router.get('/getSeries', async (req,res)=>{
     const year = getYear(req,sport)
 
     try{
+        console.lot(sport)
         var series = await sport.find({Year: year})
+        console.log("Here")
+        console.log(series)
         var sportName = getSportsName(sport.collection.collectionName)
         
         if (series.length > 1){
